@@ -18,7 +18,9 @@ using System.Windows.Shapes;
 namespace AccelerationTest
 {
     /**********************************************************
-     Szenzor és aktuátor hálózatok kurzusra készített projektmunka
+    
+    Modern autó kényelmi és biztonsági funkciói
+
         Készítette:
         Szucsányu Erik Péter
         Szimkó Dániel
@@ -33,7 +35,7 @@ namespace AccelerationTest
     Szucsányi Erik Péter:
 
         Kezelőfelület elkészítése, fejlesztése
-        Sebesség változás-, és a hozzátartozó szenzorok és aktuátorok szimulálása
+        Sebesség változás-, és a hozzátartozó szenzorok és alktuátorok szimulálása
         Sebességmérő óra létrehozása, működtetése
         Akkumulátor kapacitás kezelése
         ABS szimulálása
