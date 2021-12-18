@@ -1,0 +1,115 @@
+﻿<Window x:Class="AccelerationTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccelerationTest"
+        mc:Ignorable="d"
+        Title="Simulator" Height="1040" Width="1920" Background="#FF90A4E2">
+    <Grid AutomationProperties.AccessKey="FollowedSpeed" Height="1009" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="1912">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="BG" Margin="-33,-88,408,81" Source="/road.png" Stretch="Fill"/>
+        <Image Margin="0,-157,408,0" Source="/pit.png" Stretch="Fill"/>
+
+        <Slider x:Name="Slider" Height="32" Margin="1533,41,14,0" VerticalAlignment="Top" ValueChanged="Slider_ValueChanged" Maximum="180" Background="#00000000"/>
+        <Label x:Name="FollowedSpeed" Content="Label" HorizontalAlignment="Left" Margin="1698,73,0,0" VerticalAlignment="Top" Height="26" Width="54" FontWeight="Bold"/>
+        <Button x:Name="LeftIndexButton" Content="&lt;" HorizontalAlignment="Left" Margin="1529,79,0,0" VerticalAlignment="Top" Width="75" Click="LeftIndexButton_Click" Height="20" Background="#FF375DF7" FontWeight="Bold"/>
+        <Button x:Name="RightIndexButton" Content="&gt;" HorizontalAlignment="Left" Margin="1827,79,0,0" VerticalAlignment="Top" Width="75" Cursor="" Click="RightIndexButton_Click" Height="20" Background="#FF375DF7" FontWeight="Bold"/>
+        <Button x:Name="Button_130" Content="130" HorizontalAlignment="Left" Margin="1529,143,0,0" VerticalAlignment="Top" Width="75" Click="Button_130_Click" Height="20" Background="#FF375DF7" FontWeight="Bold"/>
+        <Button x:Name="Button_100" Content="100" HorizontalAlignment="Left" Margin="1529,168,0,0" VerticalAlignment="Top" Width="75" Click="Button_100_Click" Height="20" Background="#FF375DF7" FontWeight="Bold"/>
+        <Button x:Name="Button_90" Content="90" HorizontalAlignment="Left" Margin="1529,193,0,0" VerticalAlignment="Top" Width="75" Click="Button_90_Click" Height="20" Background="#FF375DF7" FontWeight="Bold"/>
+        <Button x:Name="Button_50" Content="50" HorizontalAlignment="Left" Margin="1529,218,0,0" VerticalAlignment="Top" Width="75" Click="Button_50_Click" Height="20" Background="#FF375DF7" FontWeight="Bold"/>
+        <Image x:Name="Battery0" Margin="830,892,892,72" Source="/Battery0.png" Stretch="Fill"/>
+        <Image Margin="460,732,1078,63" Source="UJORA.png" Stretch="Fill"/>
+        <Rectangle x:Name="Mutato2" Fill="#FFF4F4F5" Height="4" Margin="618,876,0,0" Stroke="Black" VerticalAlignment="Top" RenderTransformOrigin="0.005,0.759" HorizontalAlignment="Left" Width="100">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform X="37.63" Y="48.651"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:Name="Mutato1" Fill="#FFF4F4F5" Height="4" Margin="619,873,0,0" Stroke="Black" VerticalAlignment="Top" RenderTransformOrigin="0.005,0.759" HorizontalAlignment="Left" Width="100">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-180.012"/>
+                    <TranslateTransform X="37.63" Y="48.651"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Image x:Name="ABS" Margin="419,886,1435,79" Source="ABS.png" Stretch="Fill"/>
+        <Image x:Name="LeftIndexIndicator" Margin="164,850,1682,121" Source="Index.png" Stretch="Fill" RenderTransformOrigin="1.454,0.684">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-180"/>
+                    <TranslateTransform X="-221.328" Y="-29.072"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="RightIndexIndicator" Margin="1184,0,0,135" Source="Index.png" Stretch="Fill" Height="38" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="64" RenderTransformOrigin="0.708,1.156"/>
+        <Label x:Name="MySpeed" Content="0 km/h" HorizontalAlignment="Left" Height="28" Margin="788,758,0,0" VerticalAlignment="Top" Width="96" FontFamily="Swis721 BlkEx BT" Background="{x:Null}" Foreground="#FF3C7CBB" FontSize="20"/>
+        <Image x:Name="BlindSpotIndicator" Margin="422,749,1440,204" Source="BlindSpot.png" Stretch="Fill"/>
+        <Slider x:Name="SteeringSlider" HorizontalAlignment="Right" Margin="0,298,16,0" VerticalAlignment="Top" Height="29" Width="365" Minimum="-30" Maximum="30" ValueChanged="Slider_ValueChanged_1"/>
+        <Image x:Name="LeftTurningLight" Margin="20,908,1812,39" Source="/TruningLight.png" Stretch="Fill"/>
+        <Image x:Name="RightTurningLight" Margin="1212,910,620,37" Source="/TruningLight0.png" Stretch="Fill"/>
+        <Label x:Name="BatteryLabel" Content="100 %" HorizontalAlignment="Left" Margin="891,859,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FF3C7CB9"/>
+        <Image x:Name="Battery1" Margin="830,892,892,71" Source="/Battery1.png" Stretch="Fill"/>
+        <Image x:Name="Battery2" Margin="830,893,892,71" Source="/Battery2.png" Stretch="Fill"/>
+        <Image x:Name="Battery3" Margin="830,893,892,71" Source="/Battery3.png" Stretch="Fill"/>
+        <Image x:Name="Battery4" Margin="830,893,892,71" Source="/Battery4.png" Stretch="Fill"/>
+        <Image x:Name="Battery5" Margin="830,893,892,71" Source="/Battery5.png" Stretch="Fill"/>
+        <Button x:Name="NoSpeedLimitButton" Content="No Speed Limit" HorizontalAlignment="Left" Margin="1649,143,0,0" VerticalAlignment="Top" Width="97" FontWeight="Bold" Background="#FF375DF7" Click="NoSpeedLimitButton_Click" BorderThickness="1,1,1,1" ClipToBounds="True">
+            <Button.Style>
+                <Style/>
+            </Button.Style>
+        </Button>
+        <Label x:Name="RangeLabel" Content="300 km" HorizontalAlignment="Left" Margin="891,935,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FF3C7CB9"/>
+        <Label Content="Kormányzás:" HorizontalAlignment="Left" Margin="1528,262,0,0" VerticalAlignment="Top" Width="86" Height="26" FontWeight="Bold"/>
+        <Label Content="Előttünk haladó sebessége / tempomat kézi beállítása:" HorizontalAlignment="Left" Margin="1528,6,0,0" VerticalAlignment="Top" Width="319" Height="26" FontWeight="Bold"/>
+        <Image x:Name="_50Sign" Margin="833,800,1019,149" Source="/50.png" Stretch="Fill"/>
+        <Image x:Name="_90Sign" Margin="833,800,1019,149" Source="/90.png" Stretch="Fill"/>
+        <Image x:Name="_100Sign" Margin="833,800,1019,149" Source="/100.png" Stretch="Fill"/>
+        <Image x:Name="_130Sign" Margin="833,800,1019,149" Source="/130.png" Stretch="Fill"/>
+        <Image x:Name="SteeringWheel" Margin="-540,00,0,-1230" Source="/wheel.png" Stretch="Fill" Width="1378"
+               RenderTransformOrigin="0.486,0.349" HorizontalAlignment="Center" Height="1406" VerticalAlignment="Center"/>
+        <Label x:Name="InsideTemperatureLabel" Content="Label" HorizontalAlignment="Left" Margin="1698,454,0,0" VerticalAlignment="Top"/>
+        <Label Content="Klíma beállítás:" HorizontalAlignment="Left" Margin="1527,395,0,0" VerticalAlignment="Top" Width="104" Height="26" FontWeight="Bold"/>
+        <Label Content="Aktuális külső hőmérséklet:" HorizontalAlignment="Left" Margin="1527,426,0,0" VerticalAlignment="Top" Width="168" Height="26" FontWeight="Bold"/>
+        <Label x:Name="ClimateValueLabel" Content="Label" HorizontalAlignment="Left" Margin="1699,394,0,0" VerticalAlignment="Top"/>
+        <Label Content="Klíma:" HorizontalAlignment="Left" Margin="1528,335,0,0" VerticalAlignment="Top" Width="86" Height="26" FontWeight="Bold"/>
+        <Slider x:Name="ClimateSlider" HorizontalAlignment="Left" Margin="1528,370,0,0" VerticalAlignment="Top" Width="365" Maximum="30" Minimum="15" SmallChange="0.5" Value="20" ValueChanged="Slider_ValueChanged_2"/>
+        <Label Content="Aktuális belső hőmérséklet:" HorizontalAlignment="Left" Margin="1527,453,0,0" VerticalAlignment="Top" Width="168" Height="26" FontWeight="Bold"/>
+        <Label x:Name="OutsideTemperatureLabel" Content="Label" HorizontalAlignment="Left" Margin="1698,427,0,0" VerticalAlignment="Top"/>
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="1871,-5,0,0" VerticalAlignment="Top" Width="38" FontSize="16" FontWeight="Bold" Background="#FFCC4040" Click="Button_Click"/>
+        <Image Margin="1510,594,-4,17" Source="/aszfalt.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="MyCar" Margin="1785,719,17,120" Source="/CarTop.png" Stretch="Fill"/>
+        <Image x:Name="AnotherCar_03" Margin="1785,712,17,127" Source="/CarTop_1.png" Stretch="Fill"/>
+        <Image x:Name="AnotherCar_02" Margin="1659,713,143,126" Source="/CarTop_1.png" Stretch="Fill"/>
+        <Image x:Name="AnotherCar_01" Margin="1539,715,263,124" Source="/CarTop_1.png" Stretch="Fill"/>
+        <Label Content="Felgyorsítás:" HorizontalAlignment="Left" Margin="1527,509,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Slider x:Name="SpeedUpSlider" HorizontalAlignment="Left" Margin="1526,546,0,0" VerticalAlignment="Top" Width="365" Maximum="200" SmallChange="1" ValueChanged="SpeedUpSlider_ValueChanged" Minimum="1" Value="50"/>
+        <Label x:Name="SpeedUpLabel" Content="50" HorizontalAlignment="Left" Margin="1610,509,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
