@@ -25,12 +25,30 @@ namespace AccelerationTest
     Megpróbáltuk a lehető legtöbb tudást amit a félév folyamán kaptunk belevinni a projekt elkészítésébe.
     Figyeltünk a terjedelemre, szenzorok és aktuátorok terén a gyorsaságra, egyszerűségre.
     Projektünk típusából kifolyólag szükségtelennek és valószerűtlennek tartottuk egy szerver létrehozását, ezért maradt ez ki.
+    Továbbá a projektben nincsenek kiemelten, explicit módon feltűntetve az egyes szenzorok illetve aktuátorok, a fejlesztés során az egyes vizsgálatok (if) tekintettül szenzoroknak,
+    míg az utasítások kiadását (ikon megjelenítés, értékváltoztatás) tekintettük aktuátoroknak.
 
     Feladatok megosztása:
 
     Szucsányi Erik Péter:
 
+        Kezelőfelület elkészítése, fejlesztése
+        Sebesség változás-, és a hozzátartozó szenzorok és aktuátorok szimulálása
+        Sebességmérő óra létrehozása, működtetése
+        Akkumulátor kapacitás kezelése
+        ABS szimulálása
+        Irányjelzés
+        Holttér figyelő rendszer
+        Sávváltás szimulálása
+        Kormánymozdilat működtetése és kanyarkövető fényszórók visszajelzése
 
+    Szimkó Dániel:
+        Tecnhnika háttér/segítség nyújtása a fejlesztői környezettel, számításokkal kapcsplatban
+        Felhasználói felület finomítása, fejlesztése
+        Hőmérsékle szimulálása
+        Klimatizálás működtetése
+        Táblafelismerő rendszer - sebességkorlátok létrehozása
+        Szimuláció sebességének változtatása
 
     **********************************************************/
     public partial class MainWindow : Window
